@@ -12,7 +12,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 connectDb();
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://portfolio-react-hermit.onrender.com",
+  ],
   optionsSuccessStatus: 200, // For legacy browser support
 };
 app.use(express.json());
